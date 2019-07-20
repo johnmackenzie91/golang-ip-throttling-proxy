@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  my-throttler:
+    container_name: my-throttler
+    build:
+      context: ./throttler
+      dockerfile: Dockerfile
+    ports:
+    - "8079:8079"
+
+  my-app:
+    container_name: my-app
+    build:
+      context: ./app
+      dockerfile: Dockerfile
